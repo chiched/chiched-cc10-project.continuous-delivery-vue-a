@@ -1,0 +1,50 @@
+{
+  "name": "project.continuous-delivery-vue",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node server",
+    "hack:client": "vue-cli-service serve",
+    "hack:server": "nodemon server",
+    "hack": "concurrently \"yarn hack:server\" \"yarn hack:client\"",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "knex": "^0.15.2",
+    "morgan": "^1.9.0",
+    "pg": "^7.4.3",
+    "vue": "^2.5.16",
+    "vue2-google-maps": "^0.10.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-rc.10",
+    "@vue/cli-plugin-eslint": "^3.0.0-rc.10",
+    "@vue/cli-plugin-unit-mocha": "^3.0.0-rc.10",
+    "@vue/cli-service": "^3.0.0-rc.10",
+    "@vue/eslint-config-prettier": "^3.0.0-rc.10",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "chai": "^4.1.2",
+    "concurrently": "^3.6.1",
+    "lint-staged": "^7.2.0",
+    "nodemon": "^1.18.3",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
