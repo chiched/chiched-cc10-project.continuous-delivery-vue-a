@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import Map from "./components/Map";
+import HelloWorld from "./components/HelloWorld/HelloWorld.vue";
+import Map from "./components/Map/Map";
 
 export default {
   name: "app",
