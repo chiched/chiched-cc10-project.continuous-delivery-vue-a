@@ -3,7 +3,7 @@ exports.up = function(knex) {
     table.string("state");
     table.string("city");
     table.string("address");
-    table.stringitg("zip");
+    table.string("zip");
   });
 };
 

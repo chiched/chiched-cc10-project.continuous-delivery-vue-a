@@ -1,4 +1,4 @@
-const locationData = require("../../cc10-project.continuous-delivery-vue-a/data/locations.json");
+const locationData = require("../../../cc10-project.continuous-delivery-vue-a/data/locations.json");
 
 exports.seed = function(knex, Promise) {
   return knex("locations")
