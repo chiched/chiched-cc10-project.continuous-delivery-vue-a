@@ -1,0 +1,21 @@
+.filter {
+  width: 100%;
+  margin: 20px;
+}
+.filterTitle {
+  font-size: 20px;
+  padding: 10px 0;
+}
+.chileFilter {
+  width: 85%;
+  height: 50px;
+  margin-bottom: 5px;
+  display: flex;
+}
+.chileFilter .title {
+  flex-basis: 15%;
+}
+.locations .select {
+  flex-basis: 20%;
+  margin-right: 5%;
+}
