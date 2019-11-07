@@ -1,21 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <div>
-      <Map />
-    </div>
+    <h1 class="mainTitle">Flying Truck Stops</h1>
+    <Map />
+    <FilterArea />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld/HelloWorld.vue";
+import FilterArea from "./components/FilterArea/FilterArea";
 import Map from "./components/Map/Map";
 
 export default {
   name: "app",
   components: {
-    HelloWorld,
+    FilterArea,
     Map,
   },
 };
@@ -26,8 +24,10 @@ export default {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.mainTitle {
+  margin-top: 20px;
+  text-align: center;
 }
 </style>
