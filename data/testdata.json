@@ -1,0 +1,28 @@
+{
+  "testdata": [
+    {
+      "id": 1,
+      "name": "test1",
+      "position": {
+        "lat": 25.74,
+        "lng": -105
+      }
+    },
+    {
+      "id": 2,
+      "name": "test2",
+      "position": {
+        "lat": 24.7492,
+        "lng": -103.9803
+      }
+    },
+    {
+      "id": 3,
+      "name": "test3",
+      "position": {
+        "lat": 23.7592,
+        "lng": -105.9703
+      }
+    }
+  ]
+}
