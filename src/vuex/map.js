@@ -1,4 +1,5 @@
-import axios from "axios";
+// import axios from "axios";
+const { testdata } = require("../../data/testdata.json");
 
 export default {
   state: {
@@ -10,14 +11,13 @@ export default {
     },
   },
   actions: {
-    async loadMarkers({ commit }) {
+    // async loadMarkers({ commit }) {
+    loadMarkers({ commit }) {
       try {
-        const { data: locations } = await axios.get("/api/locations"); // ES6 destructuring & aliasing
-        const markers = locations.map((location) => ({
-          position: {
-            lat: location.latitude,
-            lng: location.longitude,
-          },
+        // const { data: locations } = await axios.get("/api/locations"); // ES6 destructuring & aliasing
+        console.log("testdata :", testdata);
+        const markers = testdata.map((location) => ({
+          position: location.position,
           key: location.name,
           defaultAnimation: 2,
         }));
