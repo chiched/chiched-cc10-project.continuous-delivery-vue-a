@@ -18,17 +18,17 @@ Create a `.config.js` file in the project root with this format:
 
 ```javascript
 module.exports = {
-    db: {
-      client: "postgresql",
-      connection: process.env.DB_URL || {
-        host: process.env.DB_HOST || "127.0.0.1",
-        port: process.env.DB_PORT || 5432,
-        database: process.env.DB_NAME || "truckstop",
-        user: "postgres",       // <= Your command line username
-        password: "postgres",   // <= Your command line password
-      },
-    }
-  };
+  db: {
+    client: "postgresql",
+    connection: process.env.DB_URL || {
+      host: process.env.DB_HOST || "127.0.0.1",
+      port: process.env.DB_PORT || 5432,
+      database: process.env.DB_NAME || "truckstop",
+      user: "postgres", // <= Your command line username
+      password: "postgres", // <= Your command line password
+    },
+  },
+};
 ```
 
 The migrations and seeds should automatically occur when the server is started using `yarn hack`.
