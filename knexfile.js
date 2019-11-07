@@ -1,4 +1,4 @@
-const config = require("../.config");
+const config = require("./.config");
 
 module.exports = {
   client: "postgres",
@@ -9,9 +9,9 @@ module.exports = {
   },
   migrations: {
     tableName: "knex_migrations",
-    directory: "~/../migrations",
+    directory: "./migrations",
   },
   seeds: {
-    directory: "~/../seeds",
+    directory: "./seeds",
   },
 };

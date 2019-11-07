@@ -11,9 +11,9 @@
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test": "mocha tests/server.spec.js && yarn lint",
-    "migrate": "knex migrate:latest --knexfile ./server/knexfile.js",
-    "rollback": "knex migrate:rollback --knexfile ./server/knexfile.js",
-    "seed": "knex seed:run --knexfile ./server/knexfile.js"
+    "migrate": "knex migrate:latest --knexfile ./knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile ./knexfile.js",
+    "seed": "knex seed:run --knexfile ./knexfile.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
