@@ -1,0 +1,32 @@
+.trackStops {
+  width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.trackStop {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 10px auto;
+  width: 500px;
+  border: 1px solid;
+  padding: 5px;
+}
+h2 {
+  text-align: center;
+  border-bottom-style: dotted;
+
+}
+.location {
+  text-align: left;
+  font-size: 20px;
+}
+a {
+  font-size: 20px;
+  margin-bottom: 5px;
+  display: flex;
+}
