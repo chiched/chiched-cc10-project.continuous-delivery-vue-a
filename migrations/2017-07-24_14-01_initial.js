@@ -11,3 +11,4 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex, Promise) {};
+//TODO CLONE THIS
