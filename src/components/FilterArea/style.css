@@ -9,22 +9,13 @@
 .chileFilter {
   width: 85%;
   height: 50px;
-}
-.locations {
+  margin-bottom: 5px;
   display: flex;
 }
-.locations .title {
-  flex-basis: 25%;
+.chileFilter .title {
+  flex-basis: 15%;
 }
-.locations .state {
+.locations .select {
   flex-basis: 20%;
   margin-right: 5%;
-}
-.locations .city {
-  flex-basis: 20%;
-  margin-right: 5%;
-}
-.locations .highway {
-  margin-right: 5%;
-  flex-basis: 20%;
 }
