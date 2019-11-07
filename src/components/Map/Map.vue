@@ -1,8 +1,10 @@
 <template src="./template.html"></template>
+
 <script>
 import { gmapApi } from "vue2-google-maps";
 
 export default {
+  name: "Map",
   mounted() {
     this.getLocations();
   },

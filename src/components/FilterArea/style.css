@@ -1,0 +1,30 @@
+.filter {
+  width: 100%;
+  margin: 20px;
+}
+.filterTitle {
+  font-size: 20px;
+  padding: 10px 0;
+}
+.chileFilter {
+  width: 85%;
+  height: 50px;
+}
+.locations {
+  display: flex;
+}
+.locations .title {
+  flex-basis: 25%;
+}
+.locations .state {
+  flex-basis: 20%;
+  margin-right: 5%;
+}
+.locations .city {
+  flex-basis: 20%;
+  margin-right: 5%;
+}
+.locations .highway {
+  margin-right: 5%;
+  flex-basis: 20%;
+}
