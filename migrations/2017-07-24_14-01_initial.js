@@ -10,5 +10,6 @@ exports.up = function(knex) {
   });
 };
 
-exports.down = function(knex, Promise) {};
-//TODO CLONE THIS
+exports.down = function(knex) {
+  return knex.schema.dropTable("locations");
+};
