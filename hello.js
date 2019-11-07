@@ -1,2 +1,2 @@
 const data = require("../cc10-project.continuous-delivery-vue-a/data/locations.json");
-console.log(data.filter((x) => x.Addresses.length > 1));
+console.log(data.length);
