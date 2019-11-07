@@ -32,4 +32,4 @@ module.exports = {
 ```
 
 The migrations and seeds should automatically occur when the server is started using `yarn hack`.
-However if you need to run them manually, please use `yarn migrate` and `yarn rollback`.
+However if you need to run them manually, please use `yarn migrate`, `yarn rollback`, and `yarn seed`.
