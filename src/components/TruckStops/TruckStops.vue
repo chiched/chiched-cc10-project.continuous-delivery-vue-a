@@ -3,7 +3,7 @@
 
 <script>
 export default {
-  name: "TrackStop",
+  name: "TruckStop",
   props: {
     hit: Number,
     address: String,
