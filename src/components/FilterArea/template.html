@@ -4,10 +4,7 @@
     <div class="title">Locations :</div>
     <select name="state" class="state select">
       <option selected disabled>State</option>
-      <option value="AL">AL</option>
-      <option value="AR">AR</option>
-      <option value="AZ">AZ</option>
-      <option value="CA">CA</option>
+      <option v-for="state in states" :value="state">{{state}}</option>
     </select>
     <select name="city" class="city select">
       <option selected disabled>City</option>
