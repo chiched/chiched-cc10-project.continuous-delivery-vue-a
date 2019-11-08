@@ -2,19 +2,37 @@
   <div id="app">
     <h1 class="mainTitle">Flying Truck Stops</h1>
     <Map />
-    <FilterArea />
+    <FilterArea v-if="currentView === 'filterPanel'" />
+    <TruckStops v-else />
+    <button v-on:click="goSearch" class="btn">Search</button>
   </div>
 </template>
 
 <script>
-import FilterArea from "./components/FilterArea/FilterArea";
 import Map from "./components/Map/Map";
+import FilterArea from "./components/FilterArea/FilterArea";
+import TruckStops from "./components/TruckStops/TruckStops";
 
 export default {
   name: "app",
   components: {
-    FilterArea,
     Map,
+    FilterArea,
+    TruckStops,
+  },
+  computed: {
+    currentView() {
+      return this.$store.state.currentView;
+    },
+  },
+  methods: {
+    goSearch() {
+      const stateForm = document.filter.state;
+      const num = stateForm.selectedIndex;
+      const selectedState = stateForm.options[num].value;
+      if (num !== 0)
+        this.$store.dispatch("getFilteredLocations", { state: selectedState });
+    },
   },
 };
 </script>
@@ -29,5 +47,11 @@ export default {
 .mainTitle {
   margin-top: 20px;
   text-align: center;
+}
+.btn {
+  width: 150px;
+  height: 50px;
+  margin: 20px auto;
+  display: block;
 }
 </style>
