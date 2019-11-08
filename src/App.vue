@@ -27,7 +27,11 @@ export default {
   },
   methods: {
     goSearch() {
-      this.$store.dispatch("getFilteredLocations", { state: "AL" });
+      const stateForm = document.filter.state;
+      const num = stateForm.selectedIndex;
+      const selectedState = stateForm.options[num].value;
+      if (num !== 0)
+        this.$store.dispatch("getFilteredLocations", { state: selectedState });
     },
   },
 };
