@@ -1,13 +1,11 @@
 <div class="filter">
   <div class="filterTitle">Filter Locations By Criteria :</div>
+  <form name="filter">
   <div class="chileFilter locations">
     <div class="title">Locations :</div>
     <select name="state" class="state select">
       <option selected disabled>State</option>
-      <option value="AL">AL</option>
-      <option value="AR">AR</option>
-      <option value="AZ">AZ</option>
-      <option value="CA">CA</option>
+      <option v-for="state in states" :value="state">{{state}}</option>
     </select>
     <select name="city" class="city select">
       <option selected disabled>City</option>
@@ -44,4 +42,5 @@
     <input type="checkbox" value="wendys" name="restaurants">Wendy's</input>
     <input type="checkbox" value="others" name="restaurants">Others</input>
   </div>
+  </form>
 </div>
