@@ -14,7 +14,8 @@ exports.seed = function(knex, Promise) {
             x.Addresses[0].City ||
             x.Addresses[0].Address1 ||
             x.Addresses[0].Address2 ||
-            x.Addresses[0].Zip
+            x.Addresses[0].Zip ||
+            x.ContactMethods
         )
       );
     })
@@ -36,6 +37,9 @@ const createLocation = (knex, location) => {
       city: location.Addresses[0].City,
       address: location.Addresses[0].Address1 + location.Addresses[0].Address2,
       zip: location.Addresses[0].Zip,
+      tell: location.ContactMethods.filter(
+        (x) => x.ContactMethodTypeId === 1
+      )[0].Data,
     });
   });
 };
