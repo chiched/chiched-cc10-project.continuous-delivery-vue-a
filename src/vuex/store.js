@@ -70,9 +70,19 @@ export default new Vuex.Store({
     },
   },
   mutations: {
-    setLocations(state, input) {
-      state.locations = input.locations;
-      state.markers = input.markers;
+    setLocations(state, locations) {
+      state.locations = locations;
+    },
+    setMarkers(state, locations) {
+      const markers = locations.map((location, index) => ({
+        position: {
+          lat: location.latitude,
+          lng: location.longitude,
+        },
+        key: location.name + index,
+        defaultAnimation: 2,
+      }));
+      state.markers = markers;
     },
     setFilteredLocations(state, filteredLocations) {
       state.filteredLocations = filteredLocations;
@@ -88,15 +98,8 @@ export default new Vuex.Store({
     async loadMarkers({ commit }) {
       try {
         const { data: locations } = await axios.get("/api/locations"); // ES6 destructuring & aliasing
-        const markers = locations.map((location, index) => ({
-          position: {
-            lat: location.latitude,
-            lng: location.longitude,
-          },
-          key: location.name + index,
-          defaultAnimation: 2,
-        }));
-        commit("setLocations", { locations, markers });
+        commit("setLocations", locations);
+        commit("setMarkers", locations);
       } catch (err) {
         console.error(err);
       }
@@ -114,6 +117,7 @@ export default new Vuex.Store({
           return allTrue;
         });
         store.commit("setFilteredLocations", filteredLocationInformation);
+        store.commit("setMarkers", filteredLocationInformation);
         store.commit("switchView", "resultsPanel");
       } catch (err) {
         console.log(err);
