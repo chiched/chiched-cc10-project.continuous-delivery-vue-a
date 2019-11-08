@@ -8,7 +8,7 @@ export default {
   },
   computed: {
     states() {
-      return this.$store.state.filter.states;
+      return this.$store.state.states;
     },
   },
 };

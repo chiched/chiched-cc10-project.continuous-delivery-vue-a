@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     currentView() {
-      return this.$store.state.filter.currentView;
+      return this.$store.state.currentView;
     },
   },
   methods: {
