@@ -4,14 +4,15 @@
     <div v-for="truckstop in resultArray" class="truckStop">
       <h3 class="trucktop-name">{{ truckstop.name }}</h3>
       <div class="location">{{ truckstop.address }}<br />{{ truckstop.city }},   {{ truckstop.state }} {{ truckstop.zip }}
-        <a v-show="truckstop.tell" href="tel">Tel: {{ truckstop.tell }}</a>
-        <p v-show="truckstop.fax">Fax: {{ truckstop.fax }}</p>
+        <a href="tel">Tel: {{ truckstop.tell }}</a>
+        <p>Fax: {{ truckstop.fax }}</p>
       </div>
       <div class="directions">Highway: {{ truckstop.highway }}<br/>Exit: {{ truckstop.exit }}
       </div>
       <div class="shopInformation">
           {{ truckstop.type }}<br />
-          Parking spaces: {{ truckstop.parking }}
+          Parking spaces: {{ truckstop.parking }}<br />
+          Def lanes: {{ truckstop.def }}
       </div>
     </div>
 
