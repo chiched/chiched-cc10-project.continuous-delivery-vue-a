@@ -1,21 +1,66 @@
 .filter {
-  width: 100%;
   margin: 20px;
 }
 .filterTitle {
+  text-align: center;
   font-size: 20px;
   padding: 10px 0;
 }
-.chileFilter {
-  width: 85%;
-  height: 50px;
-  margin-bottom: 5px;
-  display: flex;
+@media screen and (max-width:781px) {
+  .filter{
+    margin: 0 auto;
+  }
+  .filterTitle {
+    font-size: 15px;
+    text-align: left;
+    margin-left: auto;
+    margin-top: 0px;
+  }
+  .childFilter {
+    display: inline-block;
+    width: 10px;
+  }
+  .chileFilter .title {
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  input[type=checkbox] {
+    display: none;
+  }
+  .label {
+    border: 1px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: middle;
+    height: 40px;
+    width: 80px;
+    margin: 5px;
+    margin-left: auto;
+    padding-top: 5px;
+    font-size: 12px;
+  }
+  input[type="checkbox"]:checked + label{
+    background-color: skyblue;
+  }
 }
-.chileFilter .title {
-  flex-basis: 15%;
-}
-.locations .select {
-  flex-basis: 20%;
-  margin-right: 5%;
+@media screen and (min-width:781px) {
+  .chileFilter {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 50px;
+    text-align: left;
+    margin-bottom: 5px;
+    display: flex;
+  }
+  .chileFilter .title {
+    flex-basis: 15%;
+  }
+  .locations .select {
+    flex-basis: 20%;
+    margin-right: 5%;
+  }
 }
