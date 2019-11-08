@@ -108,7 +108,6 @@ export default new Vuex.Store({
       store.commit("updateFilters", filterOptions);
       try {
         const data = store.state.locations;
-        console.log(data);
         const filteredLocationInformation = data.filter((location) => {
           let allTrue = true;
           for (const key in filterOptions) {
