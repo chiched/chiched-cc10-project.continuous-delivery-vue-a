@@ -65,7 +65,7 @@ However if you need to run them manually, please use `yarn migrate`, `yarn rollb
 
 
 
-![Artboard](/Users/David/Desktop/Artboard.png)
+![Artboard](Artboard.png)
 
 
 
