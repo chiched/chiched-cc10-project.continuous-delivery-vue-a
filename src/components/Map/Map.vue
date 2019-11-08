@@ -30,51 +30,55 @@ export default {
     locations() {
       const allMarkers = this.$store.state.markers;
       let [max, min] = [[], []]; // [lat, lng]
-      allMarkers.forEach((marker) => {
-        if (!max[0] || max[0] < marker.position.lat)
-          max[0] = marker.position.lat;
-        if (!min[0] || min[0] > marker.position.lat)
-          min[0] = marker.position.lat;
-        if (!max[1] || max[1] < marker.position.lng)
-          max[1] = marker.position.lng;
-        if (!min[1] || min[1] > marker.position.lng)
-          min[1] = marker.position.lng;
-      });
-      let conterLat = Math.round(max[0] + min[0]) / 2;
-      let conterLng = Math.round(max[1] + min[1]) / 2;
-
-      // Calculate the difference between the latitudes of two points (radians)
-      var differLat = (max[0] * Math.PI) / 180 - (min[0] * Math.PI) / 180;
-      // Calculate the difference between the longitudes of two points (radians)
-      var differLng = (max[1] * Math.PI) / 180 - (min[1] * Math.PI) / 180;
-
+      let conterLat = 37.5;
+      let conterLng = -98.5;
       let zoomSize = 4;
-      if (differLat > differLng) {
-        if (differLat > 0.8) {
-          zoomSize = 4.2;
-        } else if (differLat > 0.5) {
-          zoomSize = 4.8;
-        } else if (differLat > 0.2) {
-          zoomSize = 5;
-        } else if (differLat > 0.1) {
-          zoomSize = 5.2;
+
+      if (allMarkers.length !== 0) {
+        allMarkers.forEach((marker) => {
+          if (!max[0] || max[0] < marker.position.lat)
+            max[0] = marker.position.lat;
+          if (!min[0] || min[0] > marker.position.lat)
+            min[0] = marker.position.lat;
+          if (!max[1] || max[1] < marker.position.lng)
+            max[1] = marker.position.lng;
+          if (!min[1] || min[1] > marker.position.lng)
+            min[1] = marker.position.lng;
+        });
+        conterLat = Math.round(max[0] + min[0]) / 2;
+        conterLng = Math.round(max[1] + min[1]) / 2;
+
+        // Calculate the difference between the latitudes of two points (radians)
+        var differLat = (max[0] * Math.PI) / 180 - (min[0] * Math.PI) / 180;
+        // Calculate the difference between the longitudes of two points (radians)
+        var differLng = (max[1] * Math.PI) / 180 - (min[1] * Math.PI) / 180;
+
+        if (differLat > differLng) {
+          if (differLat > 0.8) {
+            zoomSize = 4.2;
+          } else if (differLat > 0.5) {
+            zoomSize = 4.8;
+          } else if (differLat > 0.2) {
+            zoomSize = 5;
+          } else if (differLat > 0.1) {
+            zoomSize = 5.2;
+          } else {
+            zoomSize = 5.5;
+          }
         } else {
-          zoomSize = 5.5;
-        }
-      } else {
-        if (differLng > 0.8) {
-          zoomSize = 4.2;
-        } else if (differLng > 0.5) {
-          zoomSize = 4.8;
-        } else if (differLng > 0.2) {
-          zoomSize = 5;
-        } else if (differLat > 0.1) {
-          zoomSize = 5.2;
-        } else {
-          zoomSize = 5.5;
+          if (differLng > 0.8) {
+            zoomSize = 4.2;
+          } else if (differLng > 0.5) {
+            zoomSize = 4.8;
+          } else if (differLng > 0.2) {
+            zoomSize = 5;
+          } else if (differLat > 0.1) {
+            zoomSize = 5.2;
+          } else {
+            zoomSize = 5.5;
+          }
         }
       }
-      console.log(zoomSize);
 
       let spot = {
         zoomSize: zoomSize,
