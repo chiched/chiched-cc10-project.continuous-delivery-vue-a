@@ -3,19 +3,17 @@
   <form name="filter">
   <div class="chileFilter locations">
     <div class="title">Locations :</div>
-    <select name="state" class="state select">
-      <option selected disabled>State</option>
+    <select name="state" v-model="stateChosen" class="state select">
+      <option value="State" disabled>State</option>
       <option v-for="state in states" :value="state">{{state}}</option>
     </select>
-    <select name="city" class="city select">
-      <option selected disabled>City</option>
-      <option value="city1">city1</option>
-      <option value="city2">city2</option>
+    <select name="city" v-model="cityChosen" class="city select">
+      <option value="City" disabled>City</option>
+      <option v-for="city in citiesInState" v-if="stateChosen" :value="city">{{city}}</option>
     </select>
-    <select name="highway" class="highway select">
+    <select name="highway" v-model="highwayChosen" class="highway select">
       <option selected disabled>Highway</option>
-      <option value="Highway1">Highway1</option>
-      <option value="Highway2">Highway2</option>
+      <option v-for="highway in highwaysInState" v-if="stateChosen" :value="highway">{{highway}}</option>
     </select>
   </div>
   <div class="chileFilter truckServices">
