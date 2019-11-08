@@ -62,6 +62,7 @@ export default new Vuex.Store({
       "WY",
     ],
     filteredLocations: [],
+    viewSpot: {},
     currentView: "filterPanel",
     currentFilters: {
       state: "",
@@ -83,6 +84,16 @@ export default new Vuex.Store({
         defaultAnimation: 2,
       }));
       state.markers = markers;
+    },
+    setViewSpot(state, spot) {
+      const viewSpot = {
+        zoomSize: spot.zoomSize,
+        center: {
+          lat: spot.center.lat,
+          lng: spot.center.lng,
+        },
+      };
+      state.viewSpot = viewSpot;
     },
     setFilteredLocations(state, filteredLocations) {
       state.filteredLocations = filteredLocations;
