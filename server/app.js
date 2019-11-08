@@ -1,7 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
-const db = require("knex");
+const db = require("./knex");
 
 const app = express();
 
@@ -14,7 +14,6 @@ app.use(
 
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, "..", "dist")));
-
 app.get("/api/locations", async (req, res) => {
   try {
     const locations = await db.select().table("locations");
