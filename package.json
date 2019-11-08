@@ -10,11 +10,14 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "migrate": "knex migrate:latest --knexfile ./server/knexfile.js",
-    "rollback": "knex migrate:rollback --knexfile ./server/knexfile.js"
+    "test": "mocha tests/server.spec.js && yarn lint",
+    "migrate": "knex migrate:latest --knexfile ./knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile ./knexfile.js",
+    "seed": "knex seed:run --knexfile ./knexfile.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "chai-http": "^4.3.0",
     "express": "^4.16.3",
     "knex": "^0.15.2",
     "morgan": "^1.9.0",
