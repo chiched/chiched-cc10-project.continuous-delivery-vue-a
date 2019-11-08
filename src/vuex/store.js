@@ -6,6 +6,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    stateChosen: null,
+    cityChosen: null,
+    highwayChosen: null,
     locations: [],
     markers: [],
     states: [
@@ -64,11 +67,7 @@ export default new Vuex.Store({
     filteredLocations: [],
     viewSpot: {},
     currentView: "filterPanel",
-    currentFilters: {
-      state: "",
-      city: "",
-      highway: "",
-    },
+    currentFilters: {},
   },
   mutations: {
     setLocations(state, locations) {
@@ -103,6 +102,15 @@ export default new Vuex.Store({
     },
     updateFilters(state, newFilters) {
       state.currentFilters = newFilters;
+    },
+    updateStateChosen(state, stateChosen) {
+      state.stateChosen = stateChosen;
+    },
+    updateCityChosen(state, city) {
+      state.cityChosen = city;
+    },
+    updateHighwayChosen(state, highway) {
+      state.highwayChosen = highway;
     },
   },
   actions: {

@@ -12,6 +12,14 @@ export default {
     zip: String,
     tell: String,
   },
+  computed: {
+    resultArray() {
+      return this.$store.state.filteredLocations;
+    },
+    numberOfResults() {
+      return this.$store.state.filteredLocations.length;
+    },
+  },
 };
 </script>
 
