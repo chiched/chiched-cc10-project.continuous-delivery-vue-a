@@ -4,7 +4,14 @@
     <Map />
     <FilterArea v-if="currentView === 'filterPanel'" />
     <TruckStops v-else />
-    <button v-on:click="goSearch" class="btn">Search</button>
+    <button
+      v-if="currentView === 'filterPanel'"
+      v-on:click="goSearch"
+      class="btn"
+    >
+      Search
+    </button>
+    <button v-else v-on:click="goHome" class="btn">Go to Home</button>
   </div>
 </template>
 
@@ -32,6 +39,10 @@ export default {
       const selectedState = stateForm.options[num].value;
       if (num !== 0)
         this.$store.dispatch("getFilteredLocations", { state: selectedState });
+    },
+    goHome() {
+      this.$store.commit("switchView", "filterPanel");
+      this.$store.dispatch("loadMarkers");
     },
   },
 };
