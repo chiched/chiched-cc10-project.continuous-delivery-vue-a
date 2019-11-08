@@ -2,6 +2,12 @@
 
 An App to Search 'KFlyer' Truck Stop Locations around America
 
+Premises: 
+
+*We have been hired by a truck stop company to create a single-page app so that travellers can search for truck stops based on a number of criteria.*
+
+![img](https://lh6.googleusercontent.com/jSzLnj5LSF-K2jfbXXR_1O5vtMRTsLjOPBo_x-zlYrlV26a6s_pScmJL2WmjyZ3JS8mDn08sBV5WHAWE8ySpHfpQWhScs6ncz-wSTdV6UpIM3dd7LeDhaOPsf5vFIVLB2PaJBa52rQ)
+
 ## Development
 
 Follow this guide to set up your environment etc.
@@ -33,3 +39,9 @@ module.exports = {
 
 The migrations and seeds should automatically occur when the server is started using `yarn hack`.
 However if you need to run them manually, please use `yarn migrate`, `yarn rollback`, and `yarn seed`.
+
+### Technology used
+
+<img src="https://lh5.googleusercontent.com/MbeMJpHR5Ndpfqwk_9VDv1ZJu9dIHOPoCuc-Z9PnRU-3_pw9ap6OA90jj6jq_QGBUM_RDZrJNTvth2zdBFpQBOK00VVzQ_FW391hGGx6YCisVVgcLLyamWTKzF5GSZv2KpoC5TpPLg" alt="img" style="zoom:25%;" />
+
+<img src="https://lh6.googleusercontent.com/cY6UxWkk0uXZimvZUx-S89-ShHn9aLXEiHikmPkx9DuEGo27UI1cL6tlBOI1v1neeTOkjXewcu9xhXXpZ2Y3JtUU4PwBcgaurwPbnWvTnJXcQqqdftROhbHrbDlx5Xh-6ZF7pnQ7GA" alt="img" style="zoom:8%;" />
