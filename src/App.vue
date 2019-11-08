@@ -34,15 +34,29 @@ export default {
   },
   methods: {
     goSearch() {
-      const stateForm = document.filter.state;
-      const num = stateForm.selectedIndex;
-      const selectedState = stateForm.options[num].value;
-      if (num !== 0)
-        this.$store.dispatch("getFilteredLocations", { state: selectedState });
+      const filterObject = {};
+      const stateChosen = this.$store.state.stateChosen;
+      const cityChosen = this.$store.state.cityChosen;
+      const highwayChosen = this.$store.state.highwayChosen;
+
+      if (cityChosen) {
+        filterObject.city = cityChosen;
+      } else if (highwayChosen) {
+        filterObject.highway = highwayChosen;
+      }
+      if (stateChosen) {
+        filterObject.state = stateChosen;
+        this.$store.dispatch("getFilteredLocations", filterObject);
+      }
     },
     goHome() {
       this.$store.commit("switchView", "filterPanel");
-      this.$store.dispatch("loadMarkers");
+      this.$store.commit("setMarkers", this.$store.state.locations);
+      this.$store.commit("updateFilters", {});
+      this.$store.commit("setFilteredLocations", []);
+      this.$store.commit("updateStateChosen", null);
+      this.$store.commit("updateCityChosen", null);
+      this.$store.commit("updateHighwayChosen", null);
     },
   },
 };
