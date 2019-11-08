@@ -42,6 +42,6 @@ However if you need to run them manually, please use `yarn migrate`, `yarn rollb
 
 ### Technology used
 
-<img src="https://lh5.googleusercontent.com/MbeMJpHR5Ndpfqwk_9VDv1ZJu9dIHOPoCuc-Z9PnRU-3_pw9ap6OA90jj6jq_QGBUM_RDZrJNTvth2zdBFpQBOK00VVzQ_FW391hGGx6YCisVVgcLLyamWTKzF5GSZv2KpoC5TpPLg" alt="img" style="zoom:25%;" />
+<img style="float:left;height:25px;" src="https://lh5.googleusercontent.com/MbeMJpHR5Ndpfqwk_9VDv1ZJu9dIHOPoCuc-Z9PnRU-3_pw9ap6OA90jj6jq_QGBUM_RDZrJNTvth2zdBFpQBOK00VVzQ_FW391hGGx6YCisVVgcLLyamWTKzF5GSZv2KpoC5TpPLg" alt="img" style="zoom:25%;" />
 
 <img src="https://lh6.googleusercontent.com/cY6UxWkk0uXZimvZUx-S89-ShHn9aLXEiHikmPkx9DuEGo27UI1cL6tlBOI1v1neeTOkjXewcu9xhXXpZ2Y3JtUU4PwBcgaurwPbnWvTnJXcQqqdftROhbHrbDlx5Xh-6ZF7pnQ7GA" alt="img" style="zoom:8%;" />
