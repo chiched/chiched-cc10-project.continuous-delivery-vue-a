@@ -49,9 +49,9 @@ export default {
         conterLng = Math.round(max[1] + min[1]) / 2;
 
         // Calculate the difference between the latitudes of two points (radians)
-        var differLat = (max[0] * Math.PI) / 180 - (min[0] * Math.PI) / 180;
+        const differLat = (max[0] * Math.PI) / 180 - (min[0] * Math.PI) / 180;
         // Calculate the difference between the longitudes of two points (radians)
-        var differLng = (max[1] * Math.PI) / 180 - (min[1] * Math.PI) / 180;
+        const differLng = (max[1] * Math.PI) / 180 - (min[1] * Math.PI) / 180;
 
         if (differLat > differLng) {
           if (differLat > 0.8) {
