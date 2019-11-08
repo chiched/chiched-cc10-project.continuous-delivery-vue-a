@@ -4,6 +4,7 @@ exports.up = function(knex) {
     table.string("city");
     table.string("address");
     table.string("zip");
+    table.string("tell");
   });
 };
 
@@ -13,5 +14,6 @@ exports.down = function(knex) {
     table.dropColumn("city");
     table.dropColumn("address");
     table.dropColumn("zip");
+    table.dropColumn("tell");
   });
 };
