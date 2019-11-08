@@ -10,7 +10,7 @@ export default {
   },
   computed: {
     locations() {
-      return this.$store.state.locations;
+      return this.$store.state.map.locations;
     },
     google: gmapApi,
   },
