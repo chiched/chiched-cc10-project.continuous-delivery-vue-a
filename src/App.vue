@@ -105,4 +105,10 @@ body {
   width: 40px;
   height: 40px;
 }
+@media screen and (max-width: 781px) {
+  .mainTitle {
+    font-size: 24px;
+    line-height: 44px;
+  }
+}
 </style>

@@ -4,7 +4,6 @@
       :zoom="viewSpot.zoomSize"
       :center="viewSpot.center"
       map-type-id="terrain"
-      style="width: 100%; height: 350px"
       ref="mapRef"
     >
       <GmapMarker
@@ -107,5 +106,15 @@ export default {
   top: 64px;
   width: 100%;
   z-index: 2;
+}
+.vue-map-container {
+  width: 100%;
+  height: 350px;
+}
+@media screen and (max-width: 781px) {
+  .vue-map-container {
+    width: 100%;
+    height: 300px;
+  }
 }
 </style>

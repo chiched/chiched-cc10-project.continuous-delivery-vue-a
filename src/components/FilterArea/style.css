@@ -4,8 +4,6 @@
   top: 414px;
 }
 .filterTitle {
-  position: fixed;
-  top: 414px;
   z-index: 2;
   width: 100%;
   padding: 10px 0;
@@ -13,16 +11,14 @@
   font-size: 20px;
   background: rgba(255, 255, 255, 0.8);
 }
-.formFilter {
-  position: relative;
-  top: 40px;
-}
 @media screen and (max-width: 781px) {
   .filter {
     margin: 0 auto;
     padding: 0 10px;
   }
   .filterTitle {
+    position: fixed;
+    top: 364px;
     font-size: 15px;
     text-align: left;
     margin-left: auto;
@@ -64,6 +60,14 @@
   }
 }
 @media screen and (min-width: 781px) {
+  .filterTitle {
+    position: fixed;
+    top: 414px;
+  }
+  .formFilter {
+    position: relative;
+    top: 40px;
+  }
   .chileFilter {
     margin-left: auto;
     margin-right: auto;

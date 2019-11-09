@@ -1,13 +1,11 @@
 .truckStops {
   position: relative;
-  top: 474px;
   z-index: 1;
   text-align: center;
   padding: 20px 5px;
 }
 .truckStopsTitle {
   position: fixed;
-  top: 414px;
   width: 100%;
   z-index: 2;
   padding: 20px 0 10px;
@@ -22,11 +20,23 @@
   padding: 5px;
 }
 @media screen and (max-width: 781px) {
+  .truckStops {
+    top: 424px;
+  }
+  .truckStopsTitle {
+    top: 364px;
+  }
   .truckStop {
     width: 100%;
   }
 }
 @media screen and (min-width: 781px) {
+  .truckStops {
+    top: 474px;
+  }
+  .truckStopsTitle {
+    top: 414px;
+  }
   .truckStop {
     width: 45%;
   }
