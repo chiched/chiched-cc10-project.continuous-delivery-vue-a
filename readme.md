@@ -2,7 +2,7 @@
 
 An App to Search 'KFlyer' Truck Stop Locations around America
 
-Premises: 
+Premises:
 
 *We have been hired by a truck stop company to create a single-page app so that travellers can search for truck stops based on a number of criteria.*
 
@@ -71,15 +71,15 @@ However if you need to run them manually, please use `yarn migrate`, `yarn rollb
 
 ### Demo
 
-Put link here
+You can check out a production demo of the app [on Heroku!](xhttps://frappa-team-o.herokuapp.com/)
 
 ### Future features
 
-For now the app only filters on location, on the state to be precise. 
+For now the app only filters on location, on the state to be precise.
 
 We will be adding more filters in the near future. Those will include more precise location filters, for example, city and highway. There will also be a possiblity to filter on amenities like ATM or Wifi.
 
-For the trucker it will be possible to filter on the service provided. For example, on 'oil changes', 'light mechanical work', 'tirepass' or 'Truck tire care'. 
+For the trucker it will be possible to filter on the service provided. For example, on 'oil changes', 'light mechanical work', 'tirepass' or 'Truck tire care'.
 
 For the casual traveller we will add the possibility to filter the restaurants.
 
