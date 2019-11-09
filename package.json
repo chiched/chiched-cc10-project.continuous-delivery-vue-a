@@ -8,7 +8,7 @@
     "hack:server": "nodemon server",
     "hack": "concurrently \"yarn hack:server\" \"yarn hack:client\"",
     "build": "vue-cli-service build",
-    "heroku-postbuild": "yarn rollback && yarn migrate && yarn seed && yarn build",
+    "heroku-postbuild": "yarn rollback && yarn migrate && yarn seed",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test": "mocha tests/server.spec.js && yarn lint",

@@ -8,9 +8,6 @@ Premises:
 
 ![img](https://lh6.googleusercontent.com/jSzLnj5LSF-K2jfbXXR_1O5vtMRTsLjOPBo_x-zlYrlV26a6s_pScmJL2WmjyZ3JS8mDn08sBV5WHAWE8ySpHfpQWhScs6ncz-wSTdV6UpIM3dd7LeDhaOPsf5vFIVLB2PaJBa52rQ)
 
-### Demo
-
-You can check out a production demo of the app [on Heroku!](https://sbux-app-pro.herokuapp.com/)
 
 
 ## User's manual
@@ -70,6 +67,11 @@ However if you need to run them manually, please use `yarn migrate`, `yarn rollb
 
 ![Artboard](Artboard.png)
 
+
+
+### Demo
+
+Put link here
 
 ### Future features
 
