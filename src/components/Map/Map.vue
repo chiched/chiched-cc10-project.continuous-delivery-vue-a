@@ -100,3 +100,12 @@ export default {
   },
 };
 </script>
+
+<style>
+#map {
+  position: fixed;
+  top: 64px;
+  width: 100%;
+  z-index: 2;
+}
+</style>

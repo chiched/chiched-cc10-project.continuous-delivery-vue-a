@@ -7,11 +7,13 @@
     <button
       v-if="currentView === 'filterPanel'"
       v-on:click="goSearch"
-      class="btn"
+      class="searchBtn"
     >
       Search
     </button>
-    <button v-else v-on:click="goHome" class="btn">Go to Home</button>
+    <button v-on:click="goHome" class="homeBtn">
+      <img src="./assets/home.png" />
+    </button>
   </div>
 </template>
 
@@ -63,6 +65,9 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -70,13 +75,34 @@ export default {
   color: #2c3e50;
 }
 .mainTitle {
-  margin-top: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 10px;
   text-align: center;
+  background: white;
 }
-.btn {
+.searchBtn {
   width: 150px;
   height: 50px;
-  margin: 20px auto;
+  margin: 0 auto 30px;
   display: block;
+  position: relative;
+  top: 454px;
+}
+.homeBtn {
+  position: fixed;
+  top: 12px;
+  left: 10px;
+  z-index: 3;
+  border: 0;
+  background: #fff;
+  outline: none;
+}
+.homeBtn img {
+  width: 40px;
+  height: 40px;
 }
 </style>

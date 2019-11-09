@@ -1,5 +1,4 @@
-<template src="./template.html">
-</template>
+<template src="./template.html"> </template>
 
 <script>
 export default {
@@ -11,6 +10,9 @@ export default {
     state: String,
     zip: String,
     tell: String,
+  },
+  mounted() {
+    window.scrollTo(0, 0);
   },
   computed: {
     resultArray() {

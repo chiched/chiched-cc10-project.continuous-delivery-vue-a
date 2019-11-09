@@ -1,7 +1,18 @@
 .truckStops {
+  position: relative;
+  top: 474px;
+  z-index: 1;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 20px 5px;
+}
+.truckStopsTitle {
+  position: fixed;
+  top: 414px;
+  width: 100%;
+  z-index: 2;
+  padding: 20px 0 10px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.8);
 }
 .truckStop {
   box-sizing: border-box;
@@ -10,12 +21,12 @@
   border: 1px solid;
   padding: 5px;
 }
-@media screen and (max-width:781px) {
+@media screen and (max-width: 781px) {
   .truckStop {
     width: 100%;
   }
 }
-@media screen and (min-width:781px) {
+@media screen and (min-width: 781px) {
   .truckStop {
     width: 45%;
   }
@@ -28,7 +39,6 @@
 h2 {
   text-align: center;
   border-bottom-style: dotted;
-
 }
 .location {
   text-align: left;

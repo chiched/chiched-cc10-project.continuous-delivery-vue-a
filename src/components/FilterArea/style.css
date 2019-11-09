@@ -1,14 +1,26 @@
 .filter {
   margin: 20px;
+  position: relative;
+  top: 414px;
 }
 .filterTitle {
+  position: fixed;
+  top: 414px;
+  z-index: 2;
+  width: 100%;
+  padding: 10px 0;
   text-align: center;
   font-size: 20px;
-  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.8);
 }
-@media screen and (max-width:781px) {
-  .filter{
+.formFilter {
+  position: relative;
+  top: 40px;
+}
+@media screen and (max-width: 781px) {
+  .filter {
     margin: 0 auto;
+    padding: 0 10px;
   }
   .filterTitle {
     font-size: 15px;
@@ -25,7 +37,7 @@
     font-size: 12px;
     margin-bottom: 5px;
   }
-  input[type=checkbox] {
+  input[type="checkbox"] {
     display: none;
   }
   .label {
@@ -42,11 +54,16 @@
     padding-top: 5px;
     font-size: 12px;
   }
-  input[type="checkbox"]:checked + label{
+  input[type="checkbox"]:checked + label {
     background-color: skyblue;
   }
+  .select {
+    border: 1px solid #999;
+    margin-left: 10px;
+    height: 20px;
+  }
 }
-@media screen and (min-width:781px) {
+@media screen and (min-width: 781px) {
   .chileFilter {
     margin-left: auto;
     margin-right: auto;

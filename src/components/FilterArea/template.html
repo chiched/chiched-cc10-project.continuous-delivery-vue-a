@@ -1,44 +1,109 @@
 <div class="filter">
   <div class="filterTitle">Filter Locations By Criteria :</div>
-  <form name="filter">
-  <div class="chileFilter locations">
-    <label class="title">Locations :</label>
-    <select name="state" v-model="stateChosen" class="state select">
-      <option value="State" disabled>State</option>
-      <option v-for="state in states" :value="state">{{state}}</option>
-    </select>
-    <select name="city" v-model="cityChosen" class="city select">
-      <option value="City" disabled>City</option>
-      <option v-for="city in citiesInState" v-if="stateChosen" :value="city">{{city}}</option>
-    </select>
-    <select name="highway" v-model="highwayChosen" class="highway select">
-      <option selected disabled>Highway</option>
-      <option v-for="highway in highwaysInState" v-if="stateChosen" :value="highway">{{highway}}</option>
-    </select>
-  </div>
-  <div class="chileFilter truckServices">
-    <div class="title">Truck Services :</div>
-    <input type="checkbox" id="oil" class="oil" name="truckServices"><label for="oil" class="label">Oil change</label>
-    <input type="checkbox" id="light" class="light" name="truckServices"><label for="light" class="label">Light Mechanical</label>
-    <input type="checkbox" id="tirepass" class="tirepass" name="truckServices"><label for="tirepass" class="label">Tire Pass</label>
-    <input type="checkbox" id="tirecare" class="tirecare" name="truckServices"><label for="tirecare" class="label">Truck Tire Care</label>
-  </div>
-  <div class="chileFilter type">
-    <div class="title">Type :</div>
-    <input type="checkbox" id="travel" value="travel" name="type"><label for="travel" class="label">Travel Stop</label>
-    <input type="checkbox" id="country" value="country" name="type"><label for="country" class="label">Country Store</label>
-  </div>
-  <div class="chileFilter amenities">
-    <div class="title">Amenities :</div>
-    <input type="checkbox" value="atm" id="atm" name="amenities"><label for="atm" class="label">ATM</label>
-    <input type="checkbox" value="wifi" id="wifi" name="amenities"><label for="wifi" class="label">Wifi</label>
-    <input type="checkbox" value="others" id="otherAmenity" name="amenities"><label for="otherAmenity" class="label">Others</label>
-  </div>
-  <div class="chileFilter restaurants">
-    <div class="title">Restaurants :</div>
-    <input type="checkbox" value="arbys" id="arbys" name="restaurants"><label for="arbys" class="label">Arby's</label>
-    <input type="checkbox" value="wendys" id="wendys" name="restaurants"><label for="wendys" class="label">Wendy's</label>
-    <input type="checkbox" value="others" id="otherRestaurant" name="restaurants"><label for="otherRestaurant" class="label">Others</label>
-  </div>
+  <form name="filter" class="formFilter">
+    <div class="chileFilter locations">
+      <label class="title">Locations :</label>
+      <select name="state" v-model="stateChosen" class="state select">
+        <option value="State" disabled>State</option>
+        <option v-for="state in states" :value="state">{{ state }}</option>
+      </select>
+      <select name="city" v-model="cityChosen" class="city select">
+        <option value="City" disabled>City</option>
+        <option
+          v-for="city in citiesInState"
+          v-if="stateChosen"
+          :value="city"
+          >{{ city }}</option
+        >
+      </select>
+      <select name="highway" v-model="highwayChosen" class="highway select">
+        <option selected disabled>Highway</option>
+        <option
+          v-for="highway in highwaysInState"
+          v-if="stateChosen"
+          :value="highway"
+          >{{ highway }}</option
+        >
+      </select>
+    </div>
+    <div class="chileFilter truckServices">
+      <div class="title">Truck Services :</div>
+      <input type="checkbox" id="oil" class="oil" name="truckServices" /><label
+        for="oil"
+        class="label"
+        >Oil change</label
+      >
+      <input
+        type="checkbox"
+        id="light"
+        class="light"
+        name="truckServices"
+      /><label for="light" class="label">Light Mechanical</label>
+      <input
+        type="checkbox"
+        id="tirepass"
+        class="tirepass"
+        name="truckServices"
+      /><label for="tirepass" class="label">Tire Pass</label>
+      <input
+        type="checkbox"
+        id="tirecare"
+        class="tirecare"
+        name="truckServices"
+      /><label for="tirecare" class="label">Truck Tire Care</label>
+    </div>
+    <div class="chileFilter type">
+      <div class="title">Type :</div>
+      <input type="checkbox" id="travel" value="travel" name="type" /><label
+        for="travel"
+        class="label"
+        >Travel Stop</label
+      >
+      <input type="checkbox" id="country" value="country" name="type" /><label
+        for="country"
+        class="label"
+        >Country Store</label
+      >
+    </div>
+    <div class="chileFilter amenities">
+      <div class="title">Amenities :</div>
+      <input type="checkbox" value="atm" id="atm" name="amenities" /><label
+        for="atm"
+        class="label"
+        >ATM</label
+      >
+      <input type="checkbox" value="wifi" id="wifi" name="amenities" /><label
+        for="wifi"
+        class="label"
+        >Wifi</label
+      >
+      <input
+        type="checkbox"
+        value="others"
+        id="otherAmenity"
+        name="amenities"
+      /><label for="otherAmenity" class="label">Others</label>
+    </div>
+    <div class="chileFilter restaurants">
+      <div class="title">Restaurants :</div>
+      <input
+        type="checkbox"
+        value="arbys"
+        id="arbys"
+        name="restaurants"
+      /><label for="arbys" class="label">Arby's</label>
+      <input
+        type="checkbox"
+        value="wendys"
+        id="wendys"
+        name="restaurants"
+      /><label for="wendys" class="label">Wendy's</label>
+      <input
+        type="checkbox"
+        value="others"
+        id="otherRestaurant"
+        name="restaurants"
+      /><label for="otherRestaurant" class="label">Others</label>
+    </div>
   </form>
 </div>
