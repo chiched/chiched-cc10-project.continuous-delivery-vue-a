@@ -71,7 +71,7 @@ However if you need to run them manually, please use `yarn migrate`, `yarn rollb
 
 ### Demo
 
-You can check out a production demo of the app [on Heroku!](xhttps://frappa-team-o.herokuapp.com/)
+You can check out a production demo of the app [on Heroku!](https://frappa-team-o.herokuapp.com/)
 
 ### Future features
 
