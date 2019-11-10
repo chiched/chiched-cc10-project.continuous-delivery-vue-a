@@ -43,6 +43,14 @@ export default {
         this.$store.commit("updateStopTypes", value);
       },
     },
+    restaurantTypes: {
+      get() {
+        return this.$store.state.restaurantType;
+      },
+      set(value) {
+        this.$store.commit("updateRestaurantType", value);
+      },
+    },
     stateChosen: {
       get() {
         return this.$store.state.stateChosen;
