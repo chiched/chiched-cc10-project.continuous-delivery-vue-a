@@ -7,7 +7,6 @@ exports.seed = function(knex, Promise) {
       return knex("locations").insert(
         locationData.map(
           (x) =>
-            x.SiteId ||
             x.Site.Latitude ||
             x.Site.Longitude ||
             x.Addresses[0].Name ||
