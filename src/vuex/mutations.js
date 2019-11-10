@@ -44,4 +44,7 @@ export const mutations = {
   updateStopTypes(state, types) {
     state.stopTypes = types;
   },
+  updateRestaurantType(state, restaurant) {
+    state.restaurantType = restaurant;
+  },
 };

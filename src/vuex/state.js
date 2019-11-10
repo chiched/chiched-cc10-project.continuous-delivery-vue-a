@@ -3,6 +3,7 @@ export const state = {
   cityChosen: null,
   highwayChosen: null,
   stopTypes: [],
+  restaurantType: [],
   locations: [],
   markers: [],
   states: [

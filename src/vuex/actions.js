@@ -21,10 +21,17 @@ export const actions = {
             filterOptions[key].includes(location[key])
               ? true
               : (allTrue = false);
+          } else if (key === "restaurants") {
+            location[key].forEach((restaurant) => {
+              filterOptions[key].includes(restaurant)
+                ? true
+                : (allTrue = false);
+            });
           } else {
             location[key] === filterOptions[key] ? true : (allTrue = false);
           }
         }
+        console.log(allTrue);
         return allTrue;
       });
       store.commit("setFilteredLocations", filteredLocationInformation);

@@ -41,6 +41,7 @@ export default {
       const cityChosen = this.$store.state.cityChosen;
       const highwayChosen = this.$store.state.highwayChosen;
       const stopTypes = this.$store.state.stopTypes;
+      const restaurantType = this.$store.state.restaurantType;
 
       if (stateChosen) {
         filterObject.state = stateChosen;
@@ -54,6 +55,10 @@ export default {
 
       if (stopTypes.length > 0) {
         filterObject["type"] = stopTypes;
+      }
+
+      if (restaurantType.length > 0) {
+        filterObject["restaurants"] = restaurantType;
       }
 
       if (Object.keys(filterObject).length > 0) {

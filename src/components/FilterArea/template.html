@@ -43,21 +43,24 @@
       <div class="title">Restaurants :</div>
       <input
         type="checkbox"
-        value="arbys"
+        value="Arby's"
         id="arbys"
         name="restaurants"
+        v-model="restaurantTypes"
       /><label for="arbys" class="label">Arby's</label>
       <input
         type="checkbox"
-        value="wendys"
+        value="Wendy's"
         id="wendys"
         name="restaurants"
+        v-model="restaurantTypes"
       /><label for="wendys" class="label">Wendy's</label>
       <input
         type="checkbox"
         value="others"
         id="otherRestaurant"
         name="restaurants"
+        v-model="restaurantTypes"
       /><label for="otherRestaurant" class="label">Others</label>
     </div>
   </form>
