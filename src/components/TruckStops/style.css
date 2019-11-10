@@ -12,12 +12,50 @@
   margin: 0;
   background: rgba(255, 255, 255, 0.8);
 }
+
+.truckStop {
+ position: relative;
+ margin: 2em auto;
+ padding: 1.2em;
+ width: 90%;
+ color: #555555;
+ background-color: #fff;
+ border: 2px solid #464646;
+ box-shadow: 0 0 5px 2px #dedede inset;
+}
+.trucktop-name {
+ position: absolute;
+ padding: 0 .5em;
+ left: 20px;
+ top: -15px;
+ font-weight: bold;
+ background-color:  #fff;
+ color: #333;
+}
+
 .truckStop {
   box-sizing: border-box;
   display: inline-block;
-  margin: 10px auto;
-  border: 1px solid;
-  padding: 5px;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+.shopInformation,
+.location,
+.tel,
+.directions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 5px;
+}
+.shopInformation div {
+  text-align: left;
+  margin-right: 20px;
+}
+.location {
+  border-bottom: 1px #333 dashed;
 }
 @media screen and (max-width: 781px) {
   .truckStops {
@@ -27,7 +65,7 @@
     top: 364px;
   }
   .truckStop {
-    width: 100%;
+    width: 95%;
   }
 }
 @media screen and (min-width: 781px) {
@@ -52,10 +90,8 @@ h2 {
 }
 .location {
   text-align: left;
-  font-size: 20px;
 }
 a {
-  font-size: 20px;
   margin-bottom: 5px;
   display: flex;
 }
