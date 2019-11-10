@@ -19,6 +19,9 @@
         <div>Parking spaces: {{ truckstop.parking }}</div>
         <div>Def lanes: {{ truckstop.def }}</div>
       </div>
+      <div v-for="restaurant in truckstop.restaurants" class="restaurants">
+        Restaurant: <span> {{restaurant}}</span>
+      </div>
     </div>
   </div>
 </div>

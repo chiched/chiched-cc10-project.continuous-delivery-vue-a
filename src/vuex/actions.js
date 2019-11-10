@@ -31,7 +31,6 @@ export const actions = {
             location[key] === filterOptions[key] ? true : (allTrue = false);
           }
         }
-        console.log(allTrue);
         return allTrue;
       });
       store.commit("setFilteredLocations", filteredLocationInformation);

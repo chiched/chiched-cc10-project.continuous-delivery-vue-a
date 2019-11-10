@@ -10,6 +10,7 @@ export default {
     state: String,
     zip: String,
     tell: String,
+    restaurants: Array,
   },
   mounted() {
     window.scrollTo(0, 0);

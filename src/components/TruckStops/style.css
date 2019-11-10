@@ -57,6 +57,12 @@
 .location {
   border-bottom: 1px #333 dashed;
 }
+.restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 0 5px;
+}
 @media screen and (max-width: 781px) {
   .truckStops {
     top: 424px;
