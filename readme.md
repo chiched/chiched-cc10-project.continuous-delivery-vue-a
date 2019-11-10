@@ -20,12 +20,12 @@ You will be taken to the results page that will show you a listing of all availa
 
 The information will include:
 
-- address
-- phone and fax number
-- highway and exit number
-- if it's a truck stop or travel shop
-- number of parking spaces
-- number of Def lanes
+- Address
+- Phone and Fax number
+- Highway and the Exit Number
+- The Type of Rest Stop
+- Number of Parking Spaces
+- Number of DEF (Diesel Exhaust Fluid) lanes
 
 
 
@@ -51,8 +51,8 @@ module.exports = {
       host: process.env.DB_HOST || "127.0.0.1",
       port: process.env.DB_PORT || 5432,
       database: process.env.DB_NAME || "truckstop",
-      user: "postgres", // <= Your command line username
-      password: "postgres", // <= Your command line password
+      user: "exampleUsername", // <= Your command line username
+      password: "examplePassword", // <= Your command line password
     },
   },
 };
@@ -62,8 +62,6 @@ The migrations and seeds should automatically occur when the server is started u
 However if you need to run them manually, please use `yarn migrate`, `yarn rollback`, and `yarn seed`.
 
 ### Technology used
-
-
 
 ![Artboard](Artboard.png)
 
@@ -75,16 +73,10 @@ You can check out a production demo of the app [on Heroku!](https://frappa-team-
 
 ### Future features
 
-For now the app only filters on location, on the state to be precise.
+For now, you can filter on State, City, Highway, Stop Type & Restaurant. 
 
-We will be adding more filters in the near future. Those will include more precise location filters, for example, city and highway. There will also be a possiblity to filter on amenities like ATM or Wifi.
-
-For the trucker it will be possible to filter on the service provided. For example, on 'oil changes', 'light mechanical work', 'tirepass' or 'Truck tire care'.
-
-For the casual traveller we will add the possibility to filter the restaurants.
+We will be adding more filters in the near future, such filters for Amenities (like WiFi) and other services (like Mechanics)
 
 Those changes will be added gradually over the next weeks.
-
-
 
 We will also add more info about the truck stores and travel shops.
