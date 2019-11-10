@@ -51,7 +51,6 @@ const createLocation = (knex, location) => {
 
   return knex("locations").then(() => {
     return knex("locations").insert({
-      id: location.SiteId,
       latitude: location.Site.Latitude,
       longitude: location.Site.Longitude,
       name: location.Addresses[0].Name,
