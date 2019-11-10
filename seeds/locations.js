@@ -19,7 +19,9 @@ exports.seed = function(knex, Promise) {
             x.FilteredCustomFields ||
             x.Site.Highway ||
             x.Site.ExitNumber ||
-            x.FacilitySubtype
+            x.FacilitySubtype ||
+            x.Site.Concepts ||
+            x.CustomFields
         )
       );
     })
@@ -32,6 +34,20 @@ exports.seed = function(knex, Promise) {
     });
 };
 const createLocation = (knex, location) => {
+  let restaurants,
+    services,
+    amenities = [];
+  let concepts = location.Site.Concepts;
+  let customFields = location.CustomFields;
+  restaurants = concepts.map((x) => x.Concept.Name);
+  services = customFields
+    .filter((x) => x.CustomField.Section === "Select Truck Services")
+    .map((x) => x.CustomField.DisplayName);
+
+  amenities = customFields
+    .filter((x) => x.CustomField.Section === "Select Amenities")
+    .map((x) => x.CustomField.DisplayName);
+
   return knex("locations").then(() => {
     return knex("locations").insert({
       latitude: location.Site.Latitude,
@@ -56,6 +72,9 @@ const createLocation = (knex, location) => {
       type: location.FacilitySubtype.Name,
       highway: location.Site.Highway,
       exit: location.Site.ExitNumber,
+      restaurants: restaurants,
+      services: services,
+      amenities: amenities,
     });
   });
 };
