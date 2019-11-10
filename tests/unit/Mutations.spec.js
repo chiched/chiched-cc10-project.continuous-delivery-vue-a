@@ -1,11 +1,6 @@
 import { expect } from "chai";
-// import Vuex from "vuex";
-// import { shallowMount, createLocalVue } from "@vue/test-utils";
 import { state } from "../../src/vuex/state";
 import { mutations } from "../../src/vuex/mutations";
-
-// const localVue = createLocalVue();
-// localVue.use(Vuex);
 
 describe("mutations", () => {
   describe("setLocations", () => {
