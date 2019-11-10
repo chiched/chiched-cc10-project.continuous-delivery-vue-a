@@ -19,6 +19,10 @@
   border: 1px solid;
   padding: 5px;
 }
+.shopInformation {
+  display: flex;
+  justify-content: space-around;
+}
 @media screen and (max-width: 781px) {
   .truckStops {
     top: 424px;
