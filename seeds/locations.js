@@ -7,6 +7,7 @@ exports.seed = function(knex, Promise) {
       return knex("locations").insert(
         locationData.map(
           (x) =>
+            x.SiteId ||
             x.Site.Latitude ||
             x.Site.Longitude ||
             x.Addresses[0].Name ||
@@ -19,7 +20,8 @@ exports.seed = function(knex, Promise) {
             x.FilteredCustomFields ||
             x.Site.Highway ||
             x.Site.ExitNumber ||
-            x.FacilitySubtype
+            x.FacilitySubtype ||
+            x.Site.Concepts
         )
       );
     })
@@ -32,8 +34,14 @@ exports.seed = function(knex, Promise) {
     });
 };
 const createLocation = (knex, location) => {
+  let restaurants = [];
+  let concepts = location.Site.Concepts;
+  for (let i = 0; i < concepts.length; i++) {
+    restaurants.push(concepts[i].Concept.Name);
+  }
   return knex("locations").then(() => {
     return knex("locations").insert({
+      id: location.SiteId,
       latitude: location.Site.Latitude,
       longitude: location.Site.Longitude,
       name: location.Addresses[0].Name,
@@ -56,6 +64,7 @@ const createLocation = (knex, location) => {
       type: location.FacilitySubtype.Name,
       highway: location.Site.Highway,
       exit: location.Site.ExitNumber,
+      restaurants: restaurants,
     });
   });
 };
