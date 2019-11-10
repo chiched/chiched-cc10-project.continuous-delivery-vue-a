@@ -35,6 +35,14 @@ export default {
           return stateLocations.highway;
         });
     },
+    stopTypes: {
+      get() {
+        return this.$store.state.stopTypes;
+      },
+      set(value) {
+        this.$store.commit("updateStopTypes", value);
+      },
+    },
     stateChosen: {
       get() {
         return this.$store.state.stateChosen;

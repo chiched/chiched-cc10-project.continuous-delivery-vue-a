@@ -26,63 +26,18 @@
         >
       </select>
     </div>
-    <div class="chileFilter truckServices">
-      <div class="title">Truck Services :</div>
-      <input type="checkbox" id="oil" class="oil" name="truckServices" /><label
-        for="oil"
-        class="label"
-        >Oil change</label
-      >
-      <input
-        type="checkbox"
-        id="light"
-        class="light"
-        name="truckServices"
-      /><label for="light" class="label">Light Mechanical</label>
-      <input
-        type="checkbox"
-        id="tirepass"
-        class="tirepass"
-        name="truckServices"
-      /><label for="tirepass" class="label">Tire Pass</label>
-      <input
-        type="checkbox"
-        id="tirecare"
-        class="tirecare"
-        name="truckServices"
-      /><label for="tirecare" class="label">Truck Tire Care</label>
-    </div>
     <div class="chileFilter type">
       <div class="title">Type :</div>
-      <input type="checkbox" id="travel" value="travel" name="type" /><label
+      <input type="checkbox" id="travel" value="Travel Stop" v-model="stopTypes" name="type" /><label
         for="travel"
         class="label"
         >Travel Stop</label
       >
-      <input type="checkbox" id="country" value="country" name="type" /><label
+      <input type="checkbox" id="country" value="Country Store" v-model="stopTypes" name="type" /><label
         for="country"
         class="label"
         >Country Store</label
       >
-    </div>
-    <div class="chileFilter amenities">
-      <div class="title">Amenities :</div>
-      <input type="checkbox" value="atm" id="atm" name="amenities" /><label
-        for="atm"
-        class="label"
-        >ATM</label
-      >
-      <input type="checkbox" value="wifi" id="wifi" name="amenities" /><label
-        for="wifi"
-        class="label"
-        >Wifi</label
-      >
-      <input
-        type="checkbox"
-        value="others"
-        id="otherAmenity"
-        name="amenities"
-      /><label for="otherAmenity" class="label">Others</label>
     </div>
     <div class="chileFilter restaurants">
       <div class="title">Restaurants :</div>

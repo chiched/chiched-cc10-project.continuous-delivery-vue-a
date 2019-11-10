@@ -40,14 +40,23 @@ export default {
       const stateChosen = this.$store.state.stateChosen;
       const cityChosen = this.$store.state.cityChosen;
       const highwayChosen = this.$store.state.highwayChosen;
+      const stopTypes = this.$store.state.stopTypes;
+
+      if (stateChosen) {
+        filterObject.state = stateChosen;
+      }
 
       if (cityChosen) {
         filterObject.city = cityChosen;
       } else if (highwayChosen) {
         filterObject.highway = highwayChosen;
       }
-      if (stateChosen) {
-        filterObject.state = stateChosen;
+
+      if (stopTypes.length > 0) {
+        filterObject["type"] = stopTypes;
+      }
+
+      if (Object.keys(filterObject).length > 0) {
         this.$store.dispatch("getFilteredLocations", filterObject);
       }
     },

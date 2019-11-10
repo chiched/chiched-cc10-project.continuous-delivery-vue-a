@@ -9,6 +9,7 @@ export default new Vuex.Store({
     stateChosen: null,
     cityChosen: null,
     highwayChosen: null,
+    stopTypes: [],
     locations: [],
     markers: [],
     states: [
@@ -112,6 +113,9 @@ export default new Vuex.Store({
     updateHighwayChosen(state, highway) {
       state.highwayChosen = highway;
     },
+    updateStopTypes(state, types) {
+      state.stopTypes = types;
+    },
   },
   actions: {
     async loadMarkers({ commit }) {
@@ -130,7 +134,13 @@ export default new Vuex.Store({
         const filteredLocationInformation = data.filter((location) => {
           let allTrue = true;
           for (const key in filterOptions) {
-            location[key] === filterOptions[key] ? true : (allTrue = false);
+            if (key === "type") {
+              filterOptions[key].includes(location[key])
+                ? true
+                : (allTrue = false);
+            } else {
+              location[key] === filterOptions[key] ? true : (allTrue = false);
+            }
           }
           return allTrue;
         });
